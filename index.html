@@ -13,13 +13,10 @@
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="timeline.html">Timeline</a></li>
             <li><a href="howtohelp.html">How to help</a></li>
-            <li><a href="#about">About</a><style> padding:100px;</style></li>
-              <form>
-  <input type="text" name="search" placeholder="Search.....">
-</form>
-              <h1> <center>Coronavirus Dashboard</center></h1>
-        </ul>
-           
+            <li><form> <input type="text" name="search" placeholder="Search....."> </form></li>
+        </ul>>
+        <h1> <center>Coronavirus Dashboard for Deceased Cases</center></h1>
+        
         <div id='map' style='width:100%; height:500'></div>
         
         <br>
@@ -27,13 +24,16 @@
         <table align="center">
         <tr>
         <td class="td">
-            <h1 style="color: white;">Confirmed Cases: N/A</h1>
+            <h1 style="color: white;">Confirmed Cases (Top 5)</h1>
+            <canvas id = "mycanvas" width = "350px" height = "400px"> </canvas>
         </td>
         <td class="td">
-            <h1 style="color: white;">Deceased Cases: N/A</h1>  
+            <h1 style="color: white;">Deceased Cases (Top 5)</h1>  
+            <canvas id = "mycanvas2" width = "350px" height = "400px"> </canvas>
         </td>
         <td class="td">  
-            <h1 style="color: white;">Recovered Cases: N/A</h1> 
+            <h1 style="color: white;">Recovered Cases (Top 5)</h1>
+            <canvas id = "mycanvas3" width = "350px" height = "400px"> </canvas>
         </td>     
         </tr>
         </table>
@@ -41,6 +41,50 @@
     </body>
     
     <script>
+        var data = [{city:"Spain", pop:229422},{city: "Italy", pop: 199414},{city: "France", pop: 164589},{city:"New York", pop:160489},{city:"Germany", pop:158758}];
+        
+        var c = document.getElementById("mycanvas");
+        var ctx = c.getContext("2d");
+        
+        var i;
+        var colors = ["blue", "red", "green", "orange", "yellow"]
+        for(i = 0; i < 5; i++) {
+            ctx.fillStyle = colors[i];
+            ctx.fillRect(180,10 + 70*i,data[i]["pop"] / 2000,50);
+            ctx.font = "30px Arial";
+            ctx.fillText(data[i]["city"],10,50 + 70*i);
+        }   
+        
+        var data = [{city:"Italy", pop:26977},{city: "Spain", pop: 23521},{city: "UK", pop: 23293},{city:"New York", pop:21092},{city:"Germany", pop:17515}];
+        
+        var c = document.getElementById("mycanvas2");
+        var ctx = c.getContext("2d");
+        
+        var i;
+        var colors = ["blue", "red", "green", "orange", "yellow"]
+        for(i = 0; i < 5; i++) {
+            ctx.fillStyle = colors[i];
+            ctx.fillRect(180,10 + 70*i,data[i]["pop"] / 200,50);
+            ctx.font = "30px Arial";
+            ctx.fillText(data[i]["city"],10,50 + 70*i);
+        }
+        
+        var data = [{city:"Spain", pop:120832},{city: "Germany", pop: 114500},{city: "Iran", pop: 70933},{city:"Italy", pop:66624},{city:"Hubei", pop:63616}];
+        
+        var c = document.getElementById("mycanvas3");
+        var ctx = c.getContext("2d");
+        
+        var i;
+        var colors = ["blue", "red", "green", "orange", "yellow"]
+        for(i = 0; i < 5; i++) {
+            ctx.fillStyle = colors[i];
+            ctx.fillRect(180,10 + 70*i,data[i]["pop"] / 1000,50);
+            ctx.font = "30px Arial";
+            ctx.fillText(data[i]["city"],10,50 + 70*i);
+        }
+        
+        
+        
         // Set up the world map
         map = new L.Map('map');
         var cartocdn = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
