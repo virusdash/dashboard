@@ -12,10 +12,15 @@ h6{
     color: white;
     text-align: center;
 }
+           ul{
+                font-size: 14px;
+                color: white;
+                text-align: center;
+            }
             ul {
               list-style-type: none;
               margin: 0;
-              padding: 0;
+              padding: 8px 4px;
               overflow: hidden;
               background-color: black;
             }
@@ -43,6 +48,9 @@ h6{
 
             .active {
               background-color: #4CAF50;
+            }
+            html{
+                background-color: black;
             }
             
             td {
