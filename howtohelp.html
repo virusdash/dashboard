@@ -7,7 +7,7 @@
               margin: 0;
               padding: 0;
               overflow: hidden;
-              background-color: #333;
+              background-color: black;
             }
 
             li {
@@ -28,23 +28,52 @@
             }
 
             li a:hover:not(.active) {
-              background-color: #111;
+              background-color: black;
             }
 
             .active {
               background-color: #4CAF50;
             }
+        
+        html{ 
+        background-color: black;
+        }
+        
+         input[type=text] {
+    height: 40px;
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 1050px;
+}
+        .title{
+            color: white;
+        }
+        
         </style>
+    
 </head>
 
 <body>
-         <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="info.html">Information</a></li>
-            <li><a href="howtohelp.html">How to help</a></li>
-            <li style="float:right"><a href="#about">About</a></li>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a class="active" href="howtohelp.html">How to help</a></li>
+            <li><form> <input type="text" name="search" placeholder="Search....."> </form></li>
         </ul>
-        <h1>How can you help the Coronavirus pandemic</h1>
+        <center><h1 class = "title">How can you help the Coronavirus pandemic</h1></center>
 </body>
 
 <html>
