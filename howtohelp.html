@@ -1,0 +1,156 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<head>
+    <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: black;
+            }
+
+            li {
+              float: left;
+              border-right:1px solid #bbb;
+            }
+
+            li:last-child {
+              border-right: none;
+            }
+
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+              background-color: black;
+            }
+
+            .active {
+              background-color: #4CAF50;
+            }
+        
+        html{ 
+        background-color: black;
+        }
+        
+         input[type=text] {
+    height: 60x;
+  width: 1600px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 1050px;
+}
+        .title{
+            color: white;
+        }
+        
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+        
+        h2 {
+            color: white;
+        }
+        
+</style>
+    
+</head>
+
+<body>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a class="active" href="howtohelp.html">How to help</a></li>
+            <li><form> <input type="text" name="search" placeholder="Search....."> </form></li>
+        </ul>
+        <center><h1 class = "title">Research and Funding towards to Pandemic</h1></center>
+  
+<center><div class="card">
+  <img src="paypal-corona-photoshop.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    
+    
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations" />
+<input type="hidden" name="business" value="4N8738ANBU7PC" />
+<input type="hidden" name="currency_code" value="CAD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+</form>
+      
+  </div>
+</div></center>
+
+</body>
+<div style="position: absolute; Bottom:40%;">
+    <a style="" class="btn btn-small waves-effect waves-light black" onclick = hi()>Reality</a>
+        <div id = his style = "color: white; display: none"> 
+            1. At least 70% of the world will come into <br>contact with Corona Virus
+            <br> 2. The pandemic will cause over 100 millions jobs lost.
+    </div>
+    </div>
+    <div style="position: absolute; right:0px; Bottom: 40%;">
+    <a style="" class="btn btn-small waves-effect waves-light black" onclick = hi2()>Goals</a>
+        <div id = his2 style = "color: white; display: none"> 
+            1. In Canada by Septmember we will be able to <br> return to school.
+            <br> 2. We will find a cure for the Corona virus.
+          
+            
+        
+    
+    </div>
+    </div>
+
+    
+<script>
+
+        function hi() {
+  var x = document.getElementById("his");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    
+    function hi2(){
+
+  var x = document.getElementById("his2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+    
+    </script>
+    
+<html>
