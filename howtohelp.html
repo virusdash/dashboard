@@ -80,6 +80,49 @@ input[type=text]:focus {
             color: white;
         }
         
+.container2 {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+}
+
+.container2:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+        
+        
+        
 </style>
     
 </head>
@@ -87,14 +130,19 @@ input[type=text]:focus {
 <body>
            <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="timeline.html">News</a></li>
             <li><a class="active" href="howtohelp.html">How to help</a></li>
             <li><form> <input type="text" name="search" placeholder="Search....."> </form></li>
         </ul>
         <center><h1 class = "title">Research and Funding towards to Pandemic</h1></center>
   
 <center><div class="card">
-  <img src="paypal-corona-photoshop.jpg" alt="Avatar" style="width:100%">
+  <div class="container2">
+  <img src="coronavirus.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Below is a paypal donation link which will allow you to donate towards our created paypal account. All donations will be donated towards helping victims of COVID-19. The organization we are donating to is CanadaHelps COVID-19 Healthcare and Hospital Fund <a href = "https://www.canadahelps.org/en/cause-funds/covid-19-hospital-fund/"> (click here) </a> . You may also donate directly to the charity through the given link.</a></div>
+  </div>
+</div>
   <div class="container">
     
     
@@ -110,18 +158,22 @@ input[type=text]:focus {
 </div></center>
 
 </body>
-<div style="position: absolute; Bottom:40%;">
+<div style="height: 20%; left:60px; position: absolute; Bottom:40%;">
+    <img src = "coronavirus2.jpg" alt = "image">
+    <br>
     <a style="" class="btn btn-small waves-effect waves-light black" onclick = hi()>Reality</a>
         <div id = his style = "color: white; display: none"> 
             1. At least 70% of the world will come into <br>contact with Corona Virus
-            <br> 2. The pandemic will cause over 100 millions jobs lost.
+            <br> 2. The pandemic will cause over 100 million <br> jobs to be lost.
     </div>
     </div>
-    <div style="position: absolute; right:0px; Bottom: 40%;">
+    <div style="height: 20%; position: absolute; right:60px; Bottom: 40%;">
+    <img src = "coronavirus3.jpg" alt = "image">
+    <br>
     <a style="" class="btn btn-small waves-effect waves-light black" onclick = hi2()>Goals</a>
         <div id = his2 style = "color: white; display: none"> 
-            1. In Canada by Septmember we will be able to <br> return to school.
-            <br> 2. We will find a cure for the Corona virus.
+            1. In Canada by Septmember we will <br> be able to return to school.
+            <br> 2. We will find a cure for Corona virus.
           
             
         
